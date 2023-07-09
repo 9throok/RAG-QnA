@@ -8,7 +8,7 @@ class QuestionAnswerService(q_grpc.QuestionAnswerServicer):
     def GetAnswer(self, request, context):
         # Here's where the hardcoded response comes in
         answer = retrive_answer(request.question)
-        return q.AnswerResponse(answer="answer")
+        return q.AnswerResponse(answer=answer)
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=5))
