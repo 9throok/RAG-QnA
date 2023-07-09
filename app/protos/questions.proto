@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package questionAnswer;
+
+service QuestionAnswer {
+  rpc GetAnswer (QuestionRequest) returns (AnswerResponse) {}
+}
+
+message QuestionRequest {
+  string question = 1;
+}
+
+message AnswerResponse {
+  string answer = 1;
+}
