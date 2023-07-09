@@ -18,3 +18,6 @@ Client
 cd app/
 python3 server.py
 ```
+
+## System Design
+![Workspace](images/system_design.png)
