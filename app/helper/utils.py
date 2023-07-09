@@ -14,8 +14,8 @@ def retrive_answer(question):
     docs = index.similarity_search(question)
     # print(docs[0].page_content)
     answer = generate_answer(docs[0].page_content, question)
-    print(answer)
-    return answer.content
+    # print(answer)
+    return answer
 
     
 
@@ -32,5 +32,5 @@ def generate_answer(test, question):
         {"role": "user", "content": text}
     ]
     )
-    return completion.choices[0].message
+    return completion.choices[0].message.content
     # print(completion.choices[0].message)
