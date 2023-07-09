@@ -20,4 +20,4 @@ python3 server.py
 ```
 
 ## System Design
-![Workspace](images/system_design.png)
+![HLD](images/system_design.png)
